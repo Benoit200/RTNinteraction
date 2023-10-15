@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background: #f2f3f7;
+    gap: 20px;
+  }
+  button{
+    position: relative;
+    padding: 15px 45px;
+    font-size: 1.5rem;
+    border-radius: 15px;
+    border: none;
+    background: #00c2cb;
+    color: #22232e;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  button:active{
+    transform: scale(0.95);
+  }
+  button span{
+    position: absolute;
+    background: #004958;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: ripple 2s linear infinite;
+    transition: 0.5s;
+  }
+  @keyframes ripple{
+    0%{
+      width: 0;
+      height: 0;
+      opacity: 0.5;
+    }
+    100%{
+      width: 500px;
+      height: 500px;
+      opacity: 0;
+    }
+  }
+  .btn-2 span{
+    position: absolute;
+    background: none;
+    border: 3px solid #004958;
+    transform: translate(-50%,-50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: ripple 2s linear infinite;
+    transition: 0.5s;
+  }
